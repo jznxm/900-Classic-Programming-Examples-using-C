@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "DIV_REM.C": "cpp",
+        "cstdlib": "cpp",
+        "FREXP.C": "cpp",
+        "INT_FRAC.C": "cpp",
+        "LDEXP.C": "cpp",
+        "LOG_10.C": "cpp",
+        "MAP_RAND.C": "cpp",
+        "MATHERR.C": "cpp",
+        "MIN_MAX.C": "cpp",
+        "POW10.C": "cpp",
+        "RANDOM.C": "cpp",
+        "SQRT.C": "cpp"
+    }
+}
