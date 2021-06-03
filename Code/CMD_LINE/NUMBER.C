@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void main (void)
- {
-   char line[255];  // Line of input
+int main(void)
+{
+  char line[255]; // Line of input
 
-   long line_number = 0;  // Current line number
+  long line_number = 0; // Current line number
 
-   while (fgets(line, sizeof(line), stdin))
-     printf("%ld %s", ++line_number, line);
- }
-
+  while (fgets(line, sizeof(line), stdin))
+    printf("%ld %s", ++line_number, line);
+  return 0;
+}
