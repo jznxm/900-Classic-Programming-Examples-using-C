@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-void main (int argc, char **argv)
+int main (int argc, char **argv)
   {
     while (*argv)
       printf ("%s\n", *argv++);
+      return 0;
   }
 

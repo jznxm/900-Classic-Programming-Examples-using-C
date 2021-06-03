@@ -2,19 +2,19 @@
 #include <stdlib.h>
 
 void first(void)
- {
-   printf("First function registered\n");
- }
+{
+  printf("First function registered\n");
+}
 
 void second(void)
- {
-   printf("Second function registered\n");
- }
+{
+  printf("Second function registered\n");
+}
 
-void main (void)
- {
-   atexit(first);
-   atexit(second);
- }
-
-
+/* stack used */
+int main(void)
+{
+  atexit(first);
+  atexit(second);
+  return 0;
+}
