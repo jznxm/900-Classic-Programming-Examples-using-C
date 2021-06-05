@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <io.h>
 
-void main(void)
- {
-   dup2(2, 1);  // stdout is handle 1 stderr is handle 2
+int main(void)
+{
+  dup2(2, 1); // stdout is handle 1 stderr is handle 2
 
-   printf("This message cannot be redircted!\n");
- }
-
+  printf("This message cannot be redircted!\n");
+  return 0;
+}
