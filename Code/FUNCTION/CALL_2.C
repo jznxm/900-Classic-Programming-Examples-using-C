@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 void hello_world(void)
- {
-   printf("Hello, world!\n");
- }
+{
+  printf("Hello, world!\n");
+}
 
 void three_hellos(void)
- {
-   int counter;
+{
+  int counter;
 
-   for (counter = 1; counter <= 3; counter++)
-     hello_world();
- }
+  for (counter = 1; counter <= 3; counter++)
+    hello_world();
+}
 
-void main(void)
- {
-   three_hellos();
- }
-
+int main(void)
+{
+  three_hellos();
+  return 0;
+}

@@ -2,37 +2,38 @@
 #include <time.h>
 
 float add_em(long int a, float b)
- {
-    float result;
+{
+  float result;
 
-    result = a + b;
+  result = a + b;
 
-    return(result);
- }
+  return (result);
+}
 
- void main(void)
-  {
-    long int i;
-    float result = 0;
-    time_t start_time, stop_time;
+int main(void)
+{
+  long int i;
+  float result = 0;
+  time_t start_time, stop_time;
 
-    printf("Working...\n");
-    time(&start_time);
+  printf("Working...\n");
+  time(&start_time);
 
-    for (i = 1; i <= 100000L; i++)
-      result += i;
+  for (i = 1; i <= 100000000L; i++)
+    result += i;
 
-    time(&stop_time);
+  time(&stop_time);
 
-    printf("Using loop %d seconds\n", stop_time - start_time);
+  printf("Using loop %ld seconds\n", stop_time - start_time);
 
-    printf("Working...\n");
-    time(&start_time);
+  printf("Working...\n");
+  time(&start_time);
 
-    for (i = 1; i <= 100000L; i++)
-      result = add_em(i, result);
+  for (i = 1; i <= 100000000L; i++)
+    result = add_em(i, result);
 
-    time(&stop_time);
+  time(&stop_time);
 
-    printf("Using function %d seconds\n", stop_time - start_time);
- }
+  printf("Using function %ld seconds\n", stop_time - start_time);
+  return 0;
+}
