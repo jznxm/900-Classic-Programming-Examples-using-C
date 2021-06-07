@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <ctype.h>
 
-void main(void)
- {
-   int letter;
-  
-   printf("Type Y or N to continue and press Enter\n");
+int main(void)
+{
+  int letter;
 
-   do { 
-     letter = toupper(getchar());
-   } while ((letter != 'Y') && (letter != 'N'));
- 
-   printf("You typed %c\n", ((letter == 'Y') ? 'Y': 'N'));
- }
+  printf("Type in a string of characters and press Enter\n");
 
+  do
+  {
+    letter = getchar();
+    letter = toupper(letter);
+    putchar(letter);
+  } while (letter != '\r');
+  return 0;
+}
