@@ -8,7 +8,7 @@ int main(void)
   time_t start_time, stop_time;
 
   time(&start_time);
-  for (count = 0; count < 1000001; count++)
+  for (count = 0; count < 100001; count++)
     printf("Jamsa's 1001 C/C++ Tips\n");
   time(&stop_time);
 
@@ -18,7 +18,7 @@ int main(void)
   getchar();
 
   time(&start_time);
-  for (count = 0; count < 1000001; count++)
+  for (count = 0; count < 100001; count++)
     printf("Jamsa's 1001 C/C++ Tips\r\n");
 
   time(&stop_time);
