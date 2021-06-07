@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-void main(void)
- {
-   int letter;
+int main(void)
+{
+  int letter;
 
-   for (letter = 'A'; letter <= 'Z'; letter++)
-     putchar(letter);
- }
-
+  for (letter = 'A'; letter <= 'Z'; letter++)
+    putchar(letter);
+  printf("\n");
+  return 0;
+}
