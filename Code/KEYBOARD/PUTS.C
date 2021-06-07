@@ -15,7 +15,7 @@ int main(void)
   printf("\n\nTime required for printf %ld seconds\n",
          stop_time - start_time);
   printf("Press any key...\n");
-  getch();
+  getchar();
 
   time(&start_time);
   for (count = 0; count < 100001; count++)
