@@ -1,19 +1,18 @@
 #include <stdio.h>
 
-void main(void)
- {
-   char string[128];
+int main(void)
+{
+  char string[128];
 
-   int index = 0;
-   int letter;
+  int index = 0;
+  int letter;
 
-   printf("Type in a string and press Enter\n");
-   while ((letter = getchar()) != '\n')
-     string[index++] = letter;
+  printf("Type in a string and press Enter\n");
+  while ((letter = getchar()) != '\n')
+    string[index++] = letter;
 
-   string[index] = NULL;
+  string[index] = "\0";
 
-   printf("The string was: %s\n", string);
- }
-
-   
+  printf("The string was: %s\n", string);
+  return 0;
+}
