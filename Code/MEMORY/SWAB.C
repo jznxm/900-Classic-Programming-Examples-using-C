@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <mem.h>
+#include <unistd.h>
 
-void main(void)
- {
-   char *source = "AJSM'A S0110T pi!s";
-   char target[64];
+int main(void)
+{
+  const char *source = "AJSM'A S0110T pi!s";
+  char target[64];
 
-   memset(target, NULL, sizeof(target));  
+  memset(target, 0, sizeof(target));
 
-   swab(source, target, strlen(source));
+  swab(source, target, strlen(source));
 
-   printf("Source: %s Target %s\n", source, target);
- }
+  printf("Source: %s Target %s\n", source, target);
+  return 0;
+}
