@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void main ()
- {
-   printf("File %s: Successfully reached line %d\n", 
-     __FILE__, __LINE__);
+int main()
+{
+  printf("File %s: Successfully reached line %d\n",
+         __FILE__, __LINE__);
 
-   // Other statements here
-   
-#line 100 "FILENAME.C"
+  // Other statements here
+#line 1 "FILENAME.C"
 
-   printf("File %s: Successfully reached line %d\n", 
-   __FILE__, __LINE__);
- }
+  printf("File %s: Successfully reached line %d\n",
+         __FILE__, __LINE__);
+  return 0;
+}
