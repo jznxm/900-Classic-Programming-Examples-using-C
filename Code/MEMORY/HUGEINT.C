@@ -1,25 +1,25 @@
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h>
 
-void main (void)
+int main(void)
+{
+  long int i;
+
+  int *big_array;
+
+  if ((big_array = (int *)malloc(100000 * sizeof(long int))) == NULL)
+    printf("Error allocating huge array\n");
+  else
   {
-     long int i;
+    printf("Filling the array\n");
 
-     int huge *big_array;
+    for (i = 0; i < 100000L; i++)
+      big_array[i] = i % 32768;
 
-     if ((big_array = (int huge *) halloc (100000L,
-	sizeof(long int))) == NULL)
-       printf ("Error allocating huge array\n");
-     else
-       {             
-	 printf("Filling the array\n");
+    for (i = 0; i < 100000L; i++)
+      printf("%d ", big_array[i]);
 
-	 for (i = 0; i < 100000L; i++)
-	   big_array[i] = i % 32768;
-
-	 for (i = 0; i < 100000L; i++)
-	   printf ("%d ", big_array[i]);
-
-	 hfree(big_array);
-       }
+    free(big_array);
   }
+  return 0;
+}
