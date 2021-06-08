@@ -16,6 +16,7 @@ int main(void)
 
     for (i = 0; i < 100; i++)
       printf("%d ", int_values[i]);
+    printf("\n");
 
     free(int_values);
   }
